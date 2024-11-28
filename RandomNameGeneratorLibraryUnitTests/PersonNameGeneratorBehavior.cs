@@ -1,9 +1,7 @@
-﻿using System.Linq;
-using RandomNameGeneratorLibrary;
-using Xunit;
+﻿using RandomNameGeneratorLibrary;
 
 namespace RandomNameGeneratorUnitTests
-{    
+{
     public class PersonNameGeneratorBehavior
     {
         private readonly PersonNameGenerator _personGenerator;

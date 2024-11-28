@@ -26,11 +26,14 @@ namespace RandomNameGeneratorLibrary
             return Assembly.GetExecutingAssembly()
                     .GetManifestResourceStream(ResourcePathPrefix + resourceFileName);
 #else
-            return typeof(BaseNameGenerator).GetTypeInfo().Assembly
+            return Assembly.GetExecutingAssembly()
                 .GetManifestResourceStream(ResourcePathPrefix + resourceFileName);
 #endif
-        }
 
+
+
+
+        }
         protected static string[] ReadResourceByLine(string resourceFileName)
         {
             var stream = ReadResourceStreamForFileName(resourceFileName);
